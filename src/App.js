@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-
-import { api } from "./services/api";
+import axios from "axios";
 
 function App() {
   const [users, setUsers] = useState();
+  const api = axios.create({ baseURL: "/api" });
 
   useEffect(() => {
     api
